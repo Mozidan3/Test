@@ -1,3 +1,9 @@
+const path = require("path");
+
+// إعداد المسار للجذر
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 const express = require("express");
 const geoip = require("geoip-lite");
 const useragent = require("express-useragent");
